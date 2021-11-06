@@ -2,32 +2,35 @@
 
 ## Description:
 Each environment contain a set of reads to be assembled. 
-for example
-reads = [TAA,AAC,ACG] must be assembled into "TAACG"
+```bash
+#example
+reads = [TAA,AAC,ACG] 
+Your task is to implement an agent that can assemble these reads into "TAACG"
+```
 ## Observation:
-will be added once the implementation is finalized
-
-		
+will be added once the final design is finalized		
 
 
 ## Actions:
 
 Type: *Discrete( number of reads )*
-
-example
-
+```bash
 reads = ["TAA","AAC","ACG"]
-
-if you wish to append with "TAA" then choose action 0
-
-if you wish to append with "ACG" then choose action 2
-
+"TAA" correspond to action 0
+"ACG" correspond to action 2
+```
 
 ## Reward:
 
-Rewards is 0 for all step except the terminal step
+Rewards is 0 for all non terminal step (no immediate reward, what matter is the final DNA only)
 
-At the terminal state, the reward is given base on the length of the constructed DNA
+At the end of episode (terminal state), the score is given base on the length of the assembled DNA.
+
+```bash
+reads = ["TAA","AAC","ACG"]
+action = 0,1,2    ----> TAA AAC ACG ----> "TAACG" ---> score=5
+action = 1,2      ----> AAC ACG ----> AACG ---> score=4
+```
 
 ## Episode Termination:
 

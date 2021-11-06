@@ -66,7 +66,7 @@ for someone who are new to openAI gym, read this first https://gym.openai.com/do
 ```python
 import gym
 
-env = gym.make('gym_DFA:gym_DFA-v1')
+env = gym.make("gym_DFA:dataset_1-v1")
 # implement your agent here
 ```
 

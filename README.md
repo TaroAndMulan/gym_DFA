@@ -3,7 +3,7 @@
 ## Description:
 Each environment contain a set of reads to be assembled. 
 ```bash
-#example
+#dataset_1 example
 reads = [TAA,AAC,ACG] 
 Your task is to implement an agent that can assemble these reads into "TAACG"
 ```
@@ -29,18 +29,20 @@ At the end of episode (terminal state), the score is given base on the length of
 ```bash
 reads = ["TAA","AAC","ACG"]
 action = 0,1,2    ----> TAA AAC ACG ----> "TAACG" ---> score=5
-action = 1,2      ----> AAC ACG ----> AACG ---> score=4
+action = 1,2      ----> AAC ACG ----> "AACG" ---> score=4
 ```
-
+Your task is to implement an agent that choose a sequeunce of optimal action that receive the highest score (best DNA sequence) 
 ## Episode Termination:
 
 Episodes terminate when 
 
-1. agent perform invalid action (repeat the same read/pick read that does not overlap with the current constructed DNA string)
-2. 
-3. 
+1. agent perform invalid action (repeat the same read/pick read that does not overlap correctly)
+2. agent exhausts all available option (use all reads)
 
 ## List of environments:
+
+more dataset will be add in later version
+
 
 Genome size | Number of reads | Read length | Env. name (v1) | 
 ------------ | ------------- | ------------- | ------------- | 
@@ -65,7 +67,6 @@ for someone who are new to openAI gym, read this first https://gym.openai.com/do
 import gym
 
 env = gym.make('gym_DFA_v1:dataset_1')
-# more dataset will be add in later version) 
 # implement your agent here
 ```
 

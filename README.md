@@ -69,4 +69,10 @@ import gym
 env = gym.make("gym_DFA:dataset_1-v1")
 # implement your agent here
 ```
+### manual agent support 
+use user input (keyboard) to manually choose action
+```bash
+python manual_agent_test.py
+# use keyboard to select action at each time step 
+```
 

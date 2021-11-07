@@ -55,7 +55,7 @@ Genome size | Number of reads | Read length | Env. name (v1) |
 
 ```bash
 $ pip install gym
-$ git clone https://github.com/taroandmulan/gym_DFA
+$ git clone https://github.com/taroandmulan/gym_DFA.git
 $ cd gym_DFA
 $ pip install -e .
 ```

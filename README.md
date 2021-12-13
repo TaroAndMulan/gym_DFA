@@ -1,4 +1,4 @@
-# OpenAI Gym Environments: gym_DFA
+# Denovo genome assemble OpenAI Gym Environments: gym_DFA
 
 ## Description:
 Each environment contain a set of reads to be assembled. 
